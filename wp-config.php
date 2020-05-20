@@ -26,13 +26,13 @@ define('FS_METHOD','direct');
 define( 'DB_NAME', 'wordpress' );
 
 /** MySQL database username */
-define( 'DB_USER', 'jefferson' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
 define( 'DB_PASSWORD', 'root' );
 
 /** MySQL hostname */
-define( 'DB_HOST', '192.168.15.200' );
+define( 'DB_HOST', '51.222.38.90:3308' );
 
 /** Database Charset to use in creating database tables. */
 

@@ -23,7 +23,7 @@
 
 define('FS_METHOD','direct');
 
-define( 'DB_NAME', 'wordpress' );
+define( 'DB_NAME', 'wp_beta' );
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );

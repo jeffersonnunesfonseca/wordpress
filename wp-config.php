@@ -34,6 +34,10 @@ define( 'DB_PASSWORD', 'root' );
 /** MySQL hostname */
 define( 'DB_HOST', '51.222.38.90:3308' );
 
+$_SERVER['HTTPS'] = 'on'; 
+define( 'WP_SITEURL',  'https://' . $_SERVER['HTTP_HOST']);
+define( 'WP_HOME',  'https://' .  $_SERVER['HTTP_HOST']);	
+
 /** Database Charset to use in creating database tables. */
 
 define('DB_CHARSET', 'utf8');

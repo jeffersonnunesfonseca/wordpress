@@ -42,7 +42,7 @@ define('WPLANG', 'pt_BR');
 
 
 if($_SERVER['HTTP_HOST']=='51.222.38.90:8888')
-	header('Location: http://teste.lojascloud.com.br/wp-admin/');
+	header('Location: https://teste.lojascloud.com.br/wp-admin/');
 
 /**#@+
  * Authentication Unique Keys and Salts.

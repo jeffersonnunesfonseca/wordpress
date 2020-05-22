@@ -1,0 +1,14 @@
+2020-05-21T23:56:03+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Coupons queued :: page 1
+2020-05-21T23:56:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Coupons queued :: page 1
+2020-05-21T23:56:05+00:00 NOTICE mailchimp-woocommerce-sync.started :: Starting Sync :: Thu, May 21, 2020 11:56 PM
+2020-05-21T23:56:06+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Coupons queued :: page 1
+2020-05-21T23:56:22+00:00 NOTICE coupon_sync.completed :: Done with the coupon queueing.
+2020-05-21T23:56:22+00:00 NOTICE sync.full_sync_manager.queue :: Starting PRODUCTS queueing.
+2020-05-21T23:56:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Products queued :: page 1
+2020-05-21T23:56:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Products queued :: page 2
+2020-05-21T23:56:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product queued :: obj_id 16
+2020-05-21T23:56:24+00:00 NOTICE product_sync.completed :: Done with the product queuing
+2020-05-21T23:56:24+00:00 NOTICE product_submit.success :: addStoreProduct :: #16
+2020-05-21T23:57:10+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Orders queued :: page 1
+2020-05-21T23:57:12+00:00 NOTICE order_sync.completed :: Done with the order queueing.
+2020-05-21T23:58:20+00:00 NOTICE sync.completed :: Finished Sync :: Thu, May 21, 2020 11:58 PM (total time: 00:02:15)

@@ -103,7 +103,9 @@ function remove_dashboard_widgets() {
 	remove_menu_page( 'edit.php' );                   //Posts  
 	// remove_menu_page( 'upload.php' );                 //Media  
 	remove_menu_page( 'wp-mail-smtp' );    //Pages  
-	remove_menu_page( 'admin.php?page=wc-addons' );    //Pages  
+	remove_menu_page( 'admin.php?page=wc-addons' );    //Pages
+
+	
 	remove_menu_page( 'wc-admin&path=/marketing' );    //Pages  
 	remove_menu_page( 'tools.php' );                  //Tools  
   
@@ -112,7 +114,7 @@ function remove_dashboard_widgets() {
 
   //remove menus woocomerce
   function wooninja_remove_items() {
-	$remove = array( 'wc-admin&path=/marketing','wc-addons', );
+	$remove = array( 'wc-admin','wc-addons', );
 	 foreach ( $remove as $submenu_slug ) {
 	//   if ( ! current_user_can( 'update_core' ) ) {
 	   remove_submenu_page( 'woocommerce', $submenu_slug );

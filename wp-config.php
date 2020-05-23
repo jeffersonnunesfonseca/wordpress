@@ -36,26 +36,21 @@ define( 'DB_HOST', $_ENV["DB_HOST"].":3308" );
 
 $_SERVER['HTTPS'] = 'on'; 
 define( 'WP_SITEURL',  'https://' . $_SERVER['HTTP_HOST']);
-define( 'WP_HOME',  'https://' .  $_SERVER['HTTP_HOST']);	
+define( 'WP_HOME',  'https://' .  $_SERVER['HTTP_HOST']);
+define( 'WP_AUTO_UPDATE_CORE' , false );
 
-// define( 'WPMS_ON', true );
-// define( 'WPMS_SENDGRID_API_KEY',"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" );
-// define( 'WPMS_SMTP_HOST',"smtp.sendgrid.net" );
-// define( 'WPMS_SMTP_PORT',"587" );
-// define( 'WPMS_MAIL_FROM_NAME_FORCE',"true" );
-// define( 'WPMS_MAIL_FROM',"bounces+16343161@em7137.lojascloud.com.br" );
+//desabilita notificaoes
+define('DISALLOW_FILE_EDIT',true); // theme, plugin
+define('DISALLOW_FILE_MODS',true); // core, plugin
+
 
 define( 'WPMS_ON', true ); // True turns on the whole constants support and usage, false turns it off.
-
 define( 'WPMS_DO_NOT_SEND', false ); // Or false, in that case constant is ignored.
-
 define( 'WPMS_MAIL_FROM', 'bounces+16343161@em7137.lojascloud.com.br' );
 define( 'WPMS_MAIL_FROM_FORCE', true ); // True turns it on, false turns it off.
 define( 'WPMS_MAIL_FROM_NAME', $_SERVER['HTTP_HOST'] );
 define( 'WPMS_MAIL_FROM_NAME_FORCE', true ); // True turns it on, false turns it off.
 define( 'WPMS_MAILER', 'sendgrid' ); // Possible values: 'mail', 'smtpcom', 'sendinblue', 'mailgun', 'sendgrid', 'gmail', 'smtp'.
-// define( 'WPMS_SET_RETURN_PATH', true ); // Sets $phpmailer->Sender if true, relevant only for Other SMTP mailer.
-
 define( 'WPMS_SENDGRID_API_KEY', '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' );
 
 

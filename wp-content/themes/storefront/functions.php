@@ -72,3 +72,52 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
+
+##  ADICIONADO MANUALMENTE PARA DEIXAR OPÇOES DESABILITADAS EM OPCOES DE TELA
+function remove_dashboard_widgets() {
+	// add your widget
+	$uid =  get_current_user_id();
+	// hide welcome panel
+	update_user_meta( $uid, 'show_welcome_panel', '0' );
+	// get the current hidden metaboxes
+	$hidden = get_user_meta( $uid, 'metaboxhidden_dashboard' );
+	// the metaboxes to be hidden
+	$to_hide = array(
+	  'dashboard_right_now',
+	  'dashboard_activity',
+	  'dashboard_quick_press',
+	  'dashboard_primary'
+	);
+	// if not already hidden, hide
+	if ( $hidden !== $to_hide ) {
+	  update_user_meta( $uid, 'metaboxhidden_dashboard', $to_hide );
+	}
+  }
+  add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+  function remove_menus(){  
+
+	remove_menu_page( 'index.php' );                  //Dashboard  
+	remove_menu_page( 'plugins.php' );                   //Posts  
+	
+	remove_menu_page( 'edit.php' );                   //Posts  
+	// remove_menu_page( 'upload.php' );                 //Media  
+	remove_menu_page( 'wp-mail-smtp' );    //Pages  
+	remove_menu_page( 'admin.php?page=wc-addons' );    //Pages  
+	remove_menu_page( 'wc-admin&path=/marketing' );    //Pages  
+	remove_menu_page( 'tools.php' );                  //Tools  
+  
+  }  
+  add_action( 'admin_init', 'remove_menus' );
+
+  //remove menus woocomerce
+  function wooninja_remove_items() {
+	$remove = array( 'wc-admin&path=/marketing','wc-addons', );
+	 foreach ( $remove as $submenu_slug ) {
+	//   if ( ! current_user_can( 'update_core' ) ) {
+	   remove_submenu_page( 'woocommerce', $submenu_slug );
+	//   }
+	 }
+   }
+   
+   add_action( 'admin_init', 'wooninja_remove_items');

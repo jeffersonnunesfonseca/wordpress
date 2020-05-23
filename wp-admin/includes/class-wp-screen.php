@@ -963,7 +963,9 @@ final class WP_Screen {
 			return;
 		}
 		?>
-		<div id="screen-meta-links">
+		<!-- style adicionado manualmente -->
+		<!-- <div id="screen-meta-links" style="display:none !important"> -->
+		<div id="screen-meta-links" style="display:none !important">
 		<?php if ( $this->show_screen_options() ) : ?>
 			<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
 			<button type="button" id="show-settings-link" class="button show-settings" aria-controls="screen-options-wrap" aria-expanded="false"><?php _e( 'Screen Options' ); ?></button>

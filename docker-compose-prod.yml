@@ -10,7 +10,7 @@ services:
     volumes: 
       - ".:/var/www/html/:rw"
     environment: 
-      DB_NAME: "wp_beta"
+      DB_NAME: "wpbeta"
       DB_USER: "root"
       DB_PASSWORD: "root"
       DB_HOST: "51.222.38.90"

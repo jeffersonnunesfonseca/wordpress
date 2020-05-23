@@ -1,5 +1,4 @@
 <?php
-die("sassa");
 /**
  * The main template file.
  *

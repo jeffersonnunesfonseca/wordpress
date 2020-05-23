@@ -23,16 +23,16 @@
 
 define('FS_METHOD','direct');
 
-define( 'DB_NAME', 'wp_beta' );
+define( 'DB_NAME', $_ENV["DB_NAME"] );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', $_ENV["DB_USER"] );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', $_ENV["DB_PASSWORD"] );
 
 /** MySQL hostname */
-define( 'DB_HOST', '51.222.38.90:3308' );
+define( 'DB_HOST', $_ENV["DB_HOST"].":3308" );
 
 $_SERVER['HTTPS'] = 'on'; 
 define( 'WP_SITEURL',  'https://' . $_SERVER['HTTP_HOST']);
@@ -45,8 +45,8 @@ define('DB_COLLATE', 'utf8_general_ci');
 define('WPLANG', 'pt_BR');
 
 
-if($_SERVER['HTTP_HOST']=='51.222.38.90:8888')
-	header('Location: https://teste.lojascloud.com.br/wp-admin/');
+if($_SERVER['HTTP_HOST']=='51.222.38.90:'.$_ENV["PORT_WP"] || $_SERVER['HTTP_HOST']=='192.168.15.200:'.$_ENV["PORT_WP"])
+	header('Location: https://'.$_SERVER['HTTP_HOST'].'/wp-admin/');
 
 /**#@+
  * Authentication Unique Keys and Salts.

@@ -10,5 +10,8 @@ services:
     volumes: 
       - ".:/var/www/html/:rw"
     environment: 
-      APACHE_RUN_USER: "www-data"
-      APACHE_RUN_GROUP: "www-data"
+      DB_NAME: "wpbeta"
+      DB_USER: "root"
+      DB_PASSWORD: "root"
+      DB_HOST: "192.168.15.200"
+      PORT_WP: "8888"

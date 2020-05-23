@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    build: .
+    image: wp1
+    container_name: wp_teste
+    restart: always
+    ports:
+      - "8888:80"
+    volumes: 
+      - ".:/var/www/html/:rw"
+    environment: 
+      DB_NAME: "wp_beta"
+      DB_USER: "root"
+      DB_PASSWORD: "root"
+      DB_HOST: "51.222.38.90"
+      PORT_WP: "8888"

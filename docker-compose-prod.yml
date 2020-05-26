@@ -13,5 +13,5 @@ services:
       DB_NAME: "wpbeta"
       DB_USER: "root"
       DB_PASSWORD: "root"
-      DB_HOST: "51.222.38.90"
+      DB_HOST: "51.222.38.90:3308"
       PORT_WP: "8888"

@@ -1,1 +1,1 @@
-mexido no functios do thema store front para esconde alguns menu e deixar dash boar clean
+woocomerce

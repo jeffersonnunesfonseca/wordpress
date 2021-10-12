@@ -40,8 +40,8 @@ define( 'WP_HOME',  'https://' .  $_SERVER['HTTP_HOST']);
 define( 'WP_AUTO_UPDATE_CORE' , false );
 
 //desabilita notificaoes
-define('DISALLOW_FILE_EDIT',true); // theme, plugin
-define('DISALLOW_FILE_MODS',true); // core, plugin
+// define('DISALLOW_FILE_EDIT',true); // theme, plugin
+// define('DISALLOW_FILE_MODS',true); // core, plugin
 
 
 define( 'WPMS_ON', true ); // True turns on the whole constants support and usage, false turns it off.
